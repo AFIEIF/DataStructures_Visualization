@@ -32,6 +32,10 @@ int main()
 {
     int gd = DETECT,gm = DETECT;
     initgraph(&gd,&gm,"");
+    outtextxy(10,10,"## Stack Implementation ##");
+    outtextxy(10,40,"1.Push");
+    outtextxy(10,70,"2.Pop");
+    outtextxy(10,100,"EXIT");
     int x = 400;
     int choice = 0;
     do
