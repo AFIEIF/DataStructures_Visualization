@@ -4,16 +4,24 @@
 
 void Enqueue(int *x, int* y)
 {
+    char e[2];
+    static int ele = 10;
+    sprintf(e,"%d",ele);
+    if(*x >= 600)
+    {
+        setcolor(YELLOW);
+        outtextxy(10,130,"QUEUE FULL");
+        return;
+    }
     setcolor(0);
     outtextxy(*x-25,200+125,"Rear");
     setcolor(7);
     outtextxy(*y+10,175,"Front");
     *x = *x+50;
     rectangle(*x-50,200,*x,300);
-    outtextxy(*x-25,200+75,"EN");
+    outtextxy(*x-25,200+75,e);
     outtextxy(*x-25,200+125,"Rear");
-
-
+    ele+=10;
 }
 
 void Dequeue(int *y)
